@@ -14,10 +14,10 @@ remove_words <- function(string, words) {
   vapply(description, function(x){paste(x[!tolower(x) %in% words], collapse = " ")}, character(1))
 }
 
-words_to_remove <- c(stopwords(), "apply", "applic", "also", "address", "assist", "activ", 
-  "avail", "advanc", "announc", "award", "center", "collabor", "develop", "department", 
+words_to_remove <- c(stopwords(), "apply", "applic", "also", "address", "assist", "activ", "appropri",
+  "approach", "avail", "advanc", "announc", "award", "center", "collabor", "develop", "department", 
   "element", "encourag", "fiscal", "focus", "fund", "grant", "high", "guideline", "initi",
-  "implement", "institut", "includ", "impact", "inform", "innov", "improv", "investig",
+  "implement", "institut", "includ", "impact", "inform", "innov", "improv", "investig", "individu",
   "manag", "nation", "opportun", "office", "organ", "phase",  "provid", "program", "purpos", 
   "propos", "project", "process", "resourc", "region", "request", "relief", "requir", "relat", 
   "submit", "state", "studi","specif", "system", "solicit", "support", "united", "within", "year", "")
@@ -69,10 +69,10 @@ forceNetwork(Links = edges, Nodes = nodes,
              colourScale = JS('d3.scaleOrdinal().domain(["subject", "agency"]).range(["#009ec5", "#f39844"]);'),
              linkDistance = 5, 
              charge = -1500,
-             linkWidth = JS("function(d) { return Math.sqrt(d.value*0.00001); }"),
+             linkWidth = JS("function(d) { return Math.sqrt(d.value*0.0001); }"),
              fontFamily = "sans-serif",
              fontSize = 16, 
-             opacity = 0.6, 
+             opacity = 0.7, 
              opacityNoHover = 1,
              zoom = TRUE)
 
